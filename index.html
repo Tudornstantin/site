@@ -1,226 +1,335 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALLEGRONY ART EOOD | Аренда и управление недвижимостью в Варне</title>
+    <title>PERFORMINNOVA S.R.L. | Strategic Wholesale & Industrial Solutions</title>
     <style>
         :root {
-            --primary: #1a365d; /* Глубокий синий */
-            --accent: #c05621;  /* Терракотовый/медный акцент */
-            --bg: #f7fafc;
-            --text: #2d3748;
+            --primary: #0a2342; /* Deep Navy */
+            --accent: #00a8e8;  /* Technical Blue */
+            --bg-soft: #f4f7f9;
+            --text-dark: #121212;
+            --text-muted: #545b62;
             --white: #ffffff;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: var(--text);
+            color: var(--text-dark);
             background-color: var(--white);
             line-height: 1.6;
         }
 
-        /* Шапка */
+        /* 1. HERO SECTION */
         header {
             background-color: var(--primary);
             color: var(--white);
-            padding: 80px 10% 100px;
+            padding: 140px 10%;
             text-align: center;
+            border-bottom: 5px solid var(--accent);
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin: 0;
             letter-spacing: 2px;
+            font-weight: 700;
             text-transform: uppercase;
         }
 
         header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 20px auto 0;
+            font-size: 1.4rem;
+            margin-top: 25px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.85;
+            font-weight: 300;
         }
 
         section {
-            padding: 80px 10%;
+            padding: 100px 10%;
         }
 
-        .section-title {
-            font-size: 2rem;
-            color: var(--primary);
-            border-left: 5px solid var(--accent);
-            padding-left: 20px;
-            margin-bottom: 40px;
-        }
-
-        /* Сетка услуг */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            padding: 40px;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-
-        .card h3 {
+        .tagline {
             color: var(--accent);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            color: var(--primary);
             margin-top: 0;
         }
 
-        /* Информационный блок */
-        .info-block {
-            background-color: var(--bg);
-            border-radius: 12px;
-            padding: 60px;
-            margin-top: 40px;
+        /* 2. ABOUT US */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
         }
 
-        /* Форма */
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--text-muted);
         }
 
-        .form-group {
-            margin-bottom: 20px;
+        /* 3. SERVICES */
+        .services-container {
+            background-color: var(--bg-soft);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
         }
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
+        .service-box {
+            background: var(--white);
+            padding: 40px;
+            border: 1px solid #e1e8ed;
+            border-top: 4px solid var(--primary);
         }
 
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #cbd5e0;
-            border-radius: 4px;
-            box-sizing: border-box;
+        .service-box h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-top: 0;
         }
 
-        button {
-            background-color: var(--accent);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
+        /* 4. ADVANTAGES */
+        .advantage-row {
+            border-left: 2px solid var(--accent);
+            padding-left: 30px;
+            margin-bottom: 40px;
         }
 
-        /* Подвал */
-        footer {
-            background-color: var(--primary);
-            color: white;
-            padding: 60px 10% 20px;
+        .advantage-row h4 {
+            font-size: 1.5rem;
+            margin: 0 0 10px;
+            color: var(--primary);
         }
 
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+        /* 5. PROCESS */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 40px;
+            margin-top: 50px;
         }
 
-        .footer-col h4 {
-            color: var(--accent);
-            margin-bottom: 20px;
+        .step-item {
+            text-align: left;
         }
 
-        .copyright {
+        .step-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #eceff1;
+            line-height: 1;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* 6. CONTACT FORM */
+        .contact-section {
+            background-color: var(--primary);
+            color: var(--white);
             text-align: center;
-            margin-top: 60px;
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
+        }
+
+        .contact-form {
+            max-width: 700px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 15px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.05);
+            color: white;
+            font-family: inherit;
+        }
+
+        .contact-form textarea {
+            grid-column: span 2;
+        }
+
+        .contact-form button {
+            grid-column: span 2;
+            padding: 20px;
+            background: var(--accent);
+            border: none;
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            letter-spacing: 1px;
+        }
+
+        /* 7. FOOTER / CONTACTS */
+        footer {
+            background-color: #050f1a;
+            color: #90a4ae;
+            padding: 80px 10% 40px;
+        }
+
+        .footer-cols {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-cols h5 {
+            color: var(--white);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .address-line {
+            color: var(--white);
+            font-weight: 500;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 900px) {
+            .about-grid, .services-container, .process-grid, .footer-cols {
+                grid-template-columns: 1fr;
+            }
+            .contact-form { grid-template-columns: 1fr; }
+            .contact-form textarea, .contact-form button { grid-column: span 1; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>ALLEGRONY ART EOOD</h1>
-        <p>Ваш стратегический партнер в сфере коммерческой и жилой недвижимости на черноморском побережье Болгарии.</p>
+        <h1>PERFORMINNOVA S.R.L.</h1>
+        <p>Global Wholesale Excellence & Industrial Distribution. Bridging Markets with Technical Precision and Supply Chain Innovation.</p>
     </header>
 
     <section>
-        <h2 class="section-title">О компании</h2>
-        <p>ALLEGRONY ART EOOD — специализированная компания по управлению активами в сфере недвижимости, базирующаяся в Варне. Под руководством Владимира Янева мы обеспечиваем полный цикл услуг: от оперативного управления объектами до стратегического консультирования по вопросам аренды и лизинга.</p>
-        <p>Наша экспертиза охватывает широкий спектр секторов, включая аренду коммерческих площадей, управление зрительными залами и театрами, а также предоставление услуг по лизингу промышленного и потребительского оборудования.</p>
+        <div class="about-grid">
+            <div>
+                <span class="tagline">Our Enterprise</span>
+                <h2>Driving the Future of B2B Wholesale</h2>
+                <p class="about-text">
+                    Founded in Brasov, Romania, PERFORMINNOVA S.R.L. has established itself as a premier wholesale merchant of chemical products and non-durable goods. We operate as a strategic hub for industrial supplies, ensuring that our partners receive high-compliance materials across the Romanian and European markets.
+                </p>
+                <p class="about-text">
+                    Our methodology combines vast industry sector knowledge with modern ESG-aligned business practices. By maintaining a diverse portfolio—from industrial chemicals to consumer appliances—we provide stability and logistical agility in an ever-shifting global trade environment.
+                </p>
+            </div>
+            <div style="background: var(--bg-soft); padding: 40px; border-radius: 4px;">
+                <h4 style="margin-top: 0; color: var(--primary);">Sector Authority</h4>
+                <p style="font-size: 0.95rem;">Registered at: <strong>Brasov, Romania</strong></p>
+                <p style="font-size: 0.95rem;">Primary Sector: <strong>Chemical & Allied Products Merchant Wholesalers</strong></p>
+                <p style="font-size: 0.95rem;">Operational Scope: <strong>Trans-European Industrial Distribution</strong></p>
+            </div>
+        </div>
     </section>
 
-    <section style="background-color: var(--bg);">
-        <h2 class="section-title">Направления деятельности</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Управление недвижимостью</h3>
-                <p>Полное сопровождение объектов: от поиска надежных арендаторов до технической эксплуатации зданий. Мы максимизируем доходность ваших активов в районе Приморски и по всей Варне.</p>
+    <section style="background-color: var(--bg-soft);">
+        <span class="tagline">What We Deliver</span>
+        <h2>Core Distribution Channels</h2>
+        <div class="services-container">
+            <div class="service-box">
+                <h3>Chemical & Industrial Wholesale</h3>
+                <p>Strategic distribution of chemical and allied products. We handle technical non-durable goods with strict adherence to safety and environmental standards, serving heavy industry and laboratories.</p>
             </div>
-            <div class="card">
-                <h3>Аренда и Лизинг</h3>
-                <p>Специализированные решения по аренде коммерческой, промышленной и автомобильной техники. Мы помогаем бизнесу оптимизировать затраты через гибкие инструменты лизинга.</p>
+            <div class="service-box">
+                <h3>Commercial Consumer Goods</h3>
+                <p>Full-scale merchant services for durable and non-durable consumer sectors, including apparel, furniture, and household electrical appliances. We bridge the gap between global production and regional retail.</p>
             </div>
-            <div class="card">
-                <h3>Агентские услуги</h3>
-                <p>Профессиональное посредничество при покупке, продаже и оценке объектов недвижимости. Глубокое знание локального рынка Варны позволяет нам находить лучшие предложения.</p>
+            <div class="service-box">
+                <h3>Technical Infrastructure Supply</h3>
+                <p>Integrated hardware, plumbing, and heating equipment distribution. We support the construction and maintenance sectors with just-in-time delivery of critical industrial assets.</p>
             </div>
         </div>
     </section>
 
     <section>
-        <h2 class="section-title">Связаться с нами</h2>
-        <div class="contact-form">
-            <div class="form-group">
-                <label>Ваше имя / Компания</label>
-                <input type="text" placeholder="Введите ваше имя">
-            </div>
-            <div class="form-group">
-                <label>Email для связи</label>
-                <input type="email" placeholder="example@mail.com">
-            </div>
-            <div class="form-group">
-                <label>Интересующая услуга</label>
-                <textarea rows="4" placeholder="Опишите ваши задачи в сфере недвижимости..."></textarea>
-            </div>
-            <button type="button">Отправить запрос</button>
+        <span class="tagline">The Performinnova Edge</span>
+        <h2>Optimized for Performance</h2>
+        <div class="advantage-row">
+            <h4>Diversified Portfolio Management</h4>
+            <p>Our ability to manage diverse industries—from pharmaceuticals and farm products to groceries and beer/wine—reduces supply chain risks and provides a single-point solution for complex merchant needs.</p>
+        </div>
+        <div class="advantage-row">
+            <h4>Strategic Romanian Logistics</h4>
+            <p>Based in Brasov, we leverage one of Romania's primary industrial corridors to ensure rapid transit times to both Western European markets and emerging Eastern industrial hubs.</p>
+        </div>
+        <div class="advantage-row">
+            <h4>ESG Commitment</h4>
+            <p>We strictly align our wholesale operations with modern environmental, social, and governance industry averages, ensuring sustainable and transparent corporate partnerships.</p>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-col">
-                <h4>ALLEGRONY ART EOOD</h4>
-                <p>Профессиональные решения в сфере недвижимости и аренды.</p>
+    <section style="background-color: var(--bg-soft);">
+        <span class="tagline">Methodology</span>
+        <h2>Our Supply Chain Integrity</h2>
+        <div class="process-grid">
+            <div class="step-item">
+                <span class="step-number">01</span>
+                <h4 style="color: var(--primary);">Market Sourcing</h4>
+                <p>We vet and source industrial and consumer goods from globally certified manufacturers, ensuring material quality at the point of origin.</p>
             </div>
-            <div class="footer-col">
-                <h4>Адрес офиса</h4>
-                <p>str. SELIOLU Distr. PRIMORSKI, No 12, entr. V, fl. 1, apt. 5<br>
-                Varna, 9000 Bulgaria</p>
+            <div class="step-item">
+                <span class="step-number">02</span>
+                <h4 style="color: var(--primary);">Compliance Audit</h4>
+                <p>Every product line undergoes rigorous regulatory checks to ensure compliance with Romanian and EU trade standards.</p>
             </div>
-            <div class="footer-col">
-                <h4>Контакты</h4>
-                <p>Управляющий: Владимир Янев</p>
-                <p>Email: (используйте форму выше)</p>
+            <div class="step-item">
+                <span class="step-number">03</span>
+                <h4 style="color: var(--primary);">Rapid Fulfillment</h4>
+                <p>Leveraging our digital inventory management, we execute precise fulfillment protocols to maintain a zero-delay distribution cycle.</p>
             </div>
         </div>
-        <div class="copyright">
-            &copy; 2026 ALLEGRONY ART EOOD. Зарегистрировано в Болгарии.
+    </section>
+
+    <section class="contact-section">
+        <h2>Start a Partnership Inquiry</h2>
+        <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;">Connect with our distribution team to discuss high-volume procurement or strategic merchant partnerships.</p>
+        <form class="contact-form">
+            <input type="text" placeholder="Full Name / Company Name">
+            <input type="email" placeholder="Professional Email Address">
+            <textarea rows="5" placeholder="Describe your wholesale or industrial supply requirements..."></textarea>
+            <button type="button">Send Partnership Request</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-cols">
+            <div>
+                <h5 style="font-size: 1.5rem; margin-top: 0;">PERFORMINNOVA S.R.L.</h5>
+                <p>Professional Merchant Wholesalers based in Romania, specializing in industrial chemicals, consumer goods, and technical infrastructure logistics.</p>
+            </div>
+            <div>
+                <h5>Brasov Headquarters</h5>
+                <span class="address-line">STR. SPATARUL LUCA ARBORE NR. 18</span>
+                <span class="address-line">AP. 2A 500112</span>
+                <p>Brasov, Romania</p>
+            </div>
+            <div>
+                <h5>Direct Communication</h5>
+                <p><strong>Email:</strong> info@performinnova.info</p>
+                <p><strong>Support:</strong> Monday – Friday</p>
+                <p><strong>Operational Hours:</strong> 09:00 - 18:00 (EET)</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 60px; border-top: 1px solid #1a252f; padding-top: 30px; font-size: 0.8rem;">
+            &copy; 2026 PERFORMINNOVA S.R.L. All Rights Reserved. Registered in Romania.
         </div>
     </footer>
 
